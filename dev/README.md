@@ -1,16 +1,16 @@
-### building the app
+### Building the app
 ```
-./gradlew clean build buildDockerImage
+./gradlew build
 ```
 
+### Starting the database
+```
+./startDatabase.sh
+```
 
-### running the app
-```
-./gradlew dockerComposeUp
-```
+### Running the app
+- Open IntelliJ
+- Right click `BingoApplication.java` and select `Run DemoApplication.main()`
 
 ### viewing the app
 http://localhost:8080
-
-### jenkins
-see getting-started/README.md
