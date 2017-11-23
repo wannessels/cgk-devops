@@ -1,4 +1,4 @@
-package be.cegeka.devopscourse.demo.infrastructure;
+package com.cegeka.devopscourse.demo.infrastructure;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

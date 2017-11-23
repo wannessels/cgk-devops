@@ -1,4 +1,4 @@
-package be.cegeka.devopscourse.demo;
+package com.cegeka.devopscourse.demo;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;

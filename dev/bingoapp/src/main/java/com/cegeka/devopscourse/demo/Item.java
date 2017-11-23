@@ -1,4 +1,4 @@
-package be.cegeka.devopscourse.demo;
+package com.cegeka.devopscourse.demo;
 
 import org.hibernate.validator.constraints.NotBlank;
 

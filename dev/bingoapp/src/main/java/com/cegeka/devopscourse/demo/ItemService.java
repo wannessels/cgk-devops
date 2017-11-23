@@ -1,4 +1,4 @@
-package be.cegeka.devopscourse.demo;
+package com.cegeka.devopscourse.demo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

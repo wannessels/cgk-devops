@@ -1,4 +1,4 @@
-package be.cegeka.devopscourse.demo;
+package com.cegeka.devopscourse.demo;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
