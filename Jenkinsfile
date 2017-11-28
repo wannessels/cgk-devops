@@ -13,7 +13,7 @@ node {
 			sh './gradlew check'
 			
 		}
-		archiveArtifacts artifacts: 'dev/build/reports/**'
+		archiveArtifacts artifacts: '**/build/reports/**'
 	}
     
 }
