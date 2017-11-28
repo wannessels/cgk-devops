@@ -1,9 +1,9 @@
 node {
-    stage ('This is a stage') {}
-    stage ('Another stage') {}
-    stage ('Proceed?') {
-        milestone()
-        input message: 'Proceed?'
-    }
-    stage ('Finished') {}
+    stage ('Compile') {
+		sh 'gradlew compile'
+	}
+    stage ('Test') {
+		sh 'gradlew check'
+	}
+    
 }
