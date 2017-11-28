@@ -11,8 +11,9 @@ node {
 		dir ("$WORKSPACE/dev") {
 			sh 'chmod +x ./gradlew'
 			sh './gradlew check'
-			archiveArtifacts artifacts: 'build/reports/**'
+			
 		}
+		archiveArtifacts artifacts: 'dev/build/reports/**'
 	}
     
 }
