@@ -11,8 +11,6 @@ buildscript {
     apply from :'gradle/integrationtest.gradle'
 }
 
-
-
 apply plugin: 'org.springframework.boot'
 
 repositories {
