@@ -1,6 +1,6 @@
 node {
 	stage ('Compile') {
-		git credentialsId: '43fa56ae-2764-4376-a122-17f2d82bfd85', url: 'https://github.com/wannessels/cgk-devops.git'
+		git credentialsId: 'jenkins-ssh-key', url: 'git@github.com:wannessels/devops-course-app.git'
 		dir ("$WORKSPACE/dev") {
 			sh 'chmod +x ./gradlew'
 			sh './gradlew classes'
@@ -10,7 +10,15 @@ node {
     stage ('Test') {
 		dir ("$WORKSPACE/dev") {
 			sh 'chmod +x ./gradlew'
-			sh './gradlew check'
+			sh './gradlew test'
+			
+		}
+		archiveArtifacts artifacts: '**/build/reports/**'
+	}
+	stage ('Test') {
+		dir ("$WORKSPACE/dev") {
+			sh 'chmod +x ./gradlew'
+			sh './gradlew integrationTest'
 			
 		}
 		archiveArtifacts artifacts: '**/build/reports/**'
