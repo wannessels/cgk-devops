@@ -1,9 +1,9 @@
 node {
     stage ('Compile') {
-		sh 'gradlew compile'
+		sh './gradlew compile'
 	}
     stage ('Test') {
-		sh 'gradlew check'
+		sh './gradlew check'
 	}
     
 }
