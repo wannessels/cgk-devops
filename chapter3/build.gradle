@@ -1,0 +1,38 @@
+group 'com.cegeka.devops-course'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile group: 'org.assertj', name: 'assertj-core', version: '3.8.0'
+
+}
+
+task copyDocs(type: Copy) {
+    group 'documentation'
+    from 'src/main/doc'
+    into "$buildDir/documentation"
+    expand version:project.version
+    exclude '*.gif'
+}
+
+task runMain(type: JavaExec) {
+    doLast {
+        group = 'application'
+        dependsOn 'classes'
+        main = 'HelloWorld'
+        classpath = sourceSets.main.runtimeClasspath
+        args = [System.getProperty('name')]
+    }
+}
+
+subprojects {
+    task doIt {
+        println 'Just do it! https://www.youtube.com/watch?v=ZXsQAXx_ao0'
+    }
+}

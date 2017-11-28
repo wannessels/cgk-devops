@@ -1,0 +1,4 @@
+rootProject.name = 'chapter3'
+include 'sub1'
+include 'sub2'
+

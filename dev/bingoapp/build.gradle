@@ -8,7 +8,10 @@ buildscript {
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
     }
+    apply from :'gradle/integrationtest.gradle'
 }
+
+
 
 apply plugin: 'org.springframework.boot'
 
