@@ -1,0 +1,11 @@
+task buildDockerImage (type: Docker, dependsOn: build) {
+    applicationName = project.name
+    dockerfile = file("${project.projectDir}/src/main/docker/Dockerfile")
+    doFirst {
+        copy {
+            from jar
+            rename { fileName -> fileName.replace(jar.archiveName, 'application.jar')}
+            into stageDir
+        }
+    }
+}
